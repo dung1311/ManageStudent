@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quản lý sinh viên</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body onload="renderListStudents()">
+        <div class="form-student">
+            <h3>Thông tin sinh viên</h3>
+            <label>Họ và tên</label>
+            <input type="text" id="fullName">
+            <span id="fullName-error" class="error"></span>
+            <br/>
+
+            <label>Mã số sinh viên</label>
+            <input type="text" id="idCard">
+            <span id="idCard-error" class="error"></span>
+            <br/>
+
+            <label>Email</label>
+            <input type="text" id="email">
+            <span id="email-error" class="error"></span>
+            <br/>
+
+            <label>Số điện thoại</label>
+            <input type="text" id="phoneNumber">
+            <span id="phoneNumber-error" class="error"></span>
+            <br/>
+
+            <label>Quê quán</label>
+            <input type="text" id="address">
+            <span id="address-error" class="error"></span>
+            <br/>
+
+            <label>Giới tính</label>
+            <input type="radio" name = "gender" id="male" value="Nam" required> Nam
+            <input type="radio" name = "gender" id="female" value="Nữ"> Nữ 
+            <input type="radio" name="gender" id="other" value="Khác"> Lựa chọn khác
+            <span id="gender-error" class="error"></span>
+            <br/>
+
+            <label>&nbsp;</label>
+            <button onclick="saveInformation()">Xác nhận thông tin</button>
+            <br/>
+
+        </div>
+
+        <div id="list-students">
+           <h3>Danh sách sinh viên</h3>
+           <table id="grid-students" width = "600" border="1" cellpadding = "0">
+
+           </table>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+        <script src="js/student.js"></script>
+    </body>
+
+</html>
